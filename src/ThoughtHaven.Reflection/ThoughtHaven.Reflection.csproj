@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Authors>Thought Haven, Brendan Ridenour</Authors>
+    <Company>Thought Haven</Company>
+    <Product>Thought Haven Reflection</Product>
+    <Description>Thought Haven's reflection helpers and extensions.</Description>
+    <Copyright>© Thought Haven. All rights reserved.</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
