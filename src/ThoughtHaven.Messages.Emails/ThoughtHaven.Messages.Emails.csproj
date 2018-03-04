@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Authors>Thought Haven, Brendan Ridenour</Authors>
+    <Company>Thought Haven</Company>
+    <Product>Thought Haven Messages Emails</Product>
+    <Description>Thought Haven abstractions for email services.</Description>
+    <Copyright>© Thought Haven. All rights reserved.</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ThoughtHaven.Core\ThoughtHaven.Core.csproj" />
+  </ItemGroup>
+
+</Project>
