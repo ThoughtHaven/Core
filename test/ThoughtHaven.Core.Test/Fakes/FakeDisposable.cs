@@ -1,4 +1,4 @@
-﻿namespace ThoughtHaven.Core.Tests.Fakes
+﻿namespace ThoughtHaven.Fakes
 {
     public class FakeDisposable : Disposable
     {

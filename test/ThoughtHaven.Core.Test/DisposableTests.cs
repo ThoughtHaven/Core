@@ -1,8 +1,8 @@
 ﻿using System;
-using ThoughtHaven.Core.Tests.Fakes;
+using ThoughtHaven.Fakes;
 using Xunit;
 
-namespace ThoughtHaven.Core.Tests
+namespace ThoughtHaven
 {
     public class DisposableTests
     {

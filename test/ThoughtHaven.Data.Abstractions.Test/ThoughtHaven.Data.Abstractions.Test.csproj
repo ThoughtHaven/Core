@@ -5,7 +5,7 @@
 
     <IsPackable>false</IsPackable>
 
-    <RootNamespace>ThoughtHaven</RootNamespace>
+    <RootNamespace>ThoughtHaven.Data</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ThoughtHaven.Guards\ThoughtHaven.Guards.csproj" />
+    <ProjectReference Include="..\..\src\ThoughtHaven.Data.Abstractions\ThoughtHaven.Data.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>
