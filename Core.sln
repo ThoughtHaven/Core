@@ -7,25 +7,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DACA596B-632
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8C478412-64C1-4377-8228-AE8BD45DC47B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThoughtHaven.Guards", "src\ThoughtHaven.Guards\ThoughtHaven.Guards.csproj", "{F5C6DD80-D24B-4054-8BDC-6FF4FC6043CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThoughtHaven.Guards", "src\ThoughtHaven.Guards\ThoughtHaven.Guards.csproj", "{F5C6DD80-D24B-4054-8BDC-6FF4FC6043CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThoughtHaven.Guards.Test", "test\ThoughtHaven.Guards.Test\ThoughtHaven.Guards.Test.csproj", "{F2C1947B-2461-42D0-8D65-479FCC38C73D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThoughtHaven.Guards.Test", "test\ThoughtHaven.Guards.Test\ThoughtHaven.Guards.Test.csproj", "{F2C1947B-2461-42D0-8D65-479FCC38C73D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThoughtHaven.Reflection", "src\ThoughtHaven.Reflection\ThoughtHaven.Reflection.csproj", "{295F98AF-FFDA-4F88-9BFD-7B3A3A2F8908}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThoughtHaven.Reflection", "src\ThoughtHaven.Reflection\ThoughtHaven.Reflection.csproj", "{295F98AF-FFDA-4F88-9BFD-7B3A3A2F8908}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThoughtHaven.Reflection.Test", "test\ThoughtHaven.Reflection.Test\ThoughtHaven.Reflection.Test.csproj", "{EC65974B-FF0E-4644-8332-DE7E568693F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThoughtHaven.Reflection.Test", "test\ThoughtHaven.Reflection.Test\ThoughtHaven.Reflection.Test.csproj", "{EC65974B-FF0E-4644-8332-DE7E568693F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThoughtHaven.Core", "src\ThoughtHaven.Core\ThoughtHaven.Core.csproj", "{06FDCD71-0FF3-4B4F-B02E-254FA7B6FC6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThoughtHaven.Core", "src\ThoughtHaven.Core\ThoughtHaven.Core.csproj", "{06FDCD71-0FF3-4B4F-B02E-254FA7B6FC6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThoughtHaven.Core.Test", "test\ThoughtHaven.Core.Test\ThoughtHaven.Core.Test.csproj", "{97FD9559-8A2C-4E13-97C9-DE1C55D67A5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThoughtHaven.Core.Test", "test\ThoughtHaven.Core.Test\ThoughtHaven.Core.Test.csproj", "{97FD9559-8A2C-4E13-97C9-DE1C55D67A5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThoughtHaven.Messages.Emails", "src\ThoughtHaven.Messages.Emails\ThoughtHaven.Messages.Emails.csproj", "{75B4471C-80DC-4E6D-B701-01028A38F767}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThoughtHaven.Data.Abstractions", "src\ThoughtHaven.Data.Abstractions\ThoughtHaven.Data.Abstractions.csproj", "{B6640CE6-4A7C-44E1-A4E9-3A88355F23E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThoughtHaven.Messages.Emails.Test", "test\ThoughtHaven.Messages.Emails.Test\ThoughtHaven.Messages.Emails.Test.csproj", "{1A597CF9-E71F-4292-B0F9-ED9580EE9276}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThoughtHaven.Data.Abstractions", "src\ThoughtHaven.Data.Abstractions\ThoughtHaven.Data.Abstractions.csproj", "{B6640CE6-4A7C-44E1-A4E9-3A88355F23E1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThoughtHaven.Data.Abstractions.Test", "test\ThoughtHaven.Data.Abstractions.Test\ThoughtHaven.Data.Abstractions.Test.csproj", "{590A9FCB-99ED-4566-8E55-542AFA3A144D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThoughtHaven.Data.Abstractions.Test", "test\ThoughtHaven.Data.Abstractions.Test\ThoughtHaven.Data.Abstractions.Test.csproj", "{590A9FCB-99ED-4566-8E55-542AFA3A144D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,14 +53,6 @@ Global
 		{97FD9559-8A2C-4E13-97C9-DE1C55D67A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97FD9559-8A2C-4E13-97C9-DE1C55D67A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97FD9559-8A2C-4E13-97C9-DE1C55D67A5F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{75B4471C-80DC-4E6D-B701-01028A38F767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75B4471C-80DC-4E6D-B701-01028A38F767}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75B4471C-80DC-4E6D-B701-01028A38F767}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75B4471C-80DC-4E6D-B701-01028A38F767}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A597CF9-E71F-4292-B0F9-ED9580EE9276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A597CF9-E71F-4292-B0F9-ED9580EE9276}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A597CF9-E71F-4292-B0F9-ED9580EE9276}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A597CF9-E71F-4292-B0F9-ED9580EE9276}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B6640CE6-4A7C-44E1-A4E9-3A88355F23E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B6640CE6-4A7C-44E1-A4E9-3A88355F23E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6640CE6-4A7C-44E1-A4E9-3A88355F23E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -84,8 +72,6 @@ Global
 		{EC65974B-FF0E-4644-8332-DE7E568693F9} = {8C478412-64C1-4377-8228-AE8BD45DC47B}
 		{06FDCD71-0FF3-4B4F-B02E-254FA7B6FC6A} = {DACA596B-632A-4478-80E7-7E05F68373C6}
 		{97FD9559-8A2C-4E13-97C9-DE1C55D67A5F} = {8C478412-64C1-4377-8228-AE8BD45DC47B}
-		{75B4471C-80DC-4E6D-B701-01028A38F767} = {DACA596B-632A-4478-80E7-7E05F68373C6}
-		{1A597CF9-E71F-4292-B0F9-ED9580EE9276} = {8C478412-64C1-4377-8228-AE8BD45DC47B}
 		{B6640CE6-4A7C-44E1-A4E9-3A88355F23E1} = {DACA596B-632A-4478-80E7-7E05F68373C6}
 		{590A9FCB-99ED-4566-8E55-542AFA3A144D} = {8C478412-64C1-4377-8228-AE8BD45DC47B}
 	EndGlobalSection
