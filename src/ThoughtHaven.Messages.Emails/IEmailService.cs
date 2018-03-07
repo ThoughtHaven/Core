@@ -4,6 +4,6 @@ namespace ThoughtHaven.Messages.Emails
 {
     public interface IEmailService
     {
-        Task SendAsync(EmailMessage message);
+        Task Send(EmailMessage message);
     }
 }
