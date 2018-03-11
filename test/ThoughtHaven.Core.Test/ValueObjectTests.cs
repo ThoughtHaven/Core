@@ -29,7 +29,7 @@ namespace ThoughtHaven
                 }
 
                 [Fact]
-                public void ValidValue_SetsValueProperty()
+                public void ValidValue_SetsValue()
                 {
                     var value = new object();
 
@@ -45,7 +45,7 @@ namespace ThoughtHaven
             public class EmptyOverload
             {
                 [Fact]
-                public void WhenCalled_MatchesValuePropertyHashCode()
+                public void WhenCalled_MatchesValueHashCode()
                 {
                     var value = new object();
                     var valueObject = new ValueObject<object>(value);

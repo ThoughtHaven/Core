@@ -47,7 +47,7 @@ namespace ThoughtHaven
                 }
 
                 [Fact]
-                public void ValidValue_SetsValueProperty()
+                public void ValidValue_SetsValue()
                 {
                     var valid = new StringValueObject("valid");
 

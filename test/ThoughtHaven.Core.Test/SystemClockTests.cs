@@ -7,25 +7,28 @@ namespace ThoughtHaven
     {
         public class UtcNowProperty
         {
-            [Fact]
-            public void Get_ReturnsCurrent()
+            public class GetAccessor
             {
-                var systemClock = new SystemClock();
+                [Fact]
+                public void WhenCalled_ReturnsCurrent()
+                {
+                    var systemClock = new SystemClock();
 
-                var expected = DateTimeOffset.UtcNow;
-                var actual = systemClock.UtcNow;
+                    var expected = DateTimeOffset.UtcNow;
+                    var actual = systemClock.UtcNow;
 
-                Assert.True(expected <= actual);
-            }
+                    Assert.True(expected <= actual);
+                }
 
-            [Fact]
-            public void Get_ReturnsNotDefault()
-            {
-                var systemClock = new SystemClock();
+                [Fact]
+                public void WhenCalled_ReturnsNotDefault()
+                {
+                    var systemClock = new SystemClock();
 
-                var result = systemClock.UtcNow;
+                    var result = systemClock.UtcNow;
 
-                Assert.NotEqual(default(DateTimeOffset), result);
+                    Assert.NotEqual(default(DateTimeOffset), result);
+                }
             }
         }
     }
