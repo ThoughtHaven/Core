@@ -9,6 +9,7 @@
     <Product>Thought Haven Data Abstractions</Product>
     <Description>Reuseable abstractions for common data access.</Description>
     <Copyright>© Thought Haven. All rights reserved.</Copyright>
+    <Version>0.100.0</Version>
   </PropertyGroup>
 
 </Project>

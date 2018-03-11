@@ -8,6 +8,7 @@
     <Description>Thought Haven's reflection helpers and extensions.</Description>
     <Copyright>© Thought Haven. All rights reserved.</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.100.0</Version>
   </PropertyGroup>
 
 </Project>
