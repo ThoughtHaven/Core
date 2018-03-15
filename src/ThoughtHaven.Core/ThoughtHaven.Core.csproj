@@ -9,7 +9,7 @@
     <Product>Thought Haven Core</Product>
     <Description>Thought Haven's core library for universal helpers and functionality.</Description>
     <Copyright>© Thought Haven. All rights reserved.</Copyright>
-    <Version>0.100.0</Version>
+    <Version>0.101.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
