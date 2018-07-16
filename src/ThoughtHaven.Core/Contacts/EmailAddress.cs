@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ThoughtHaven.Messages.Emails
+namespace ThoughtHaven.Contacts
 {
     public class EmailAddress : StringValueObject
     {
@@ -16,6 +16,7 @@ namespace ThoughtHaven.Messages.Emails
 
         public override string ToString() => this.Value;
 
-        public static implicit operator EmailAddress(string value) => new EmailAddress(value);
+        public static implicit operator EmailAddress(string value) =>
+            new EmailAddress(value);
     }
 }

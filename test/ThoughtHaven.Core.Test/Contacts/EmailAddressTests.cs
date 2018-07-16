@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 
-namespace ThoughtHaven.Messages.Emails
+namespace ThoughtHaven.Contacts
 {
     public class EmailAddressTests
     {
