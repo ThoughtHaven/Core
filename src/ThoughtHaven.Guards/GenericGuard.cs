@@ -7,15 +7,15 @@ namespace ThoughtHaven
         public static T Null<T>(string paramName, T value)
         {
             ParamName(paramName);
-
+            
             if (value == null) { throw new ArgumentNullException(paramName); }
 
             return value;
         }
-
+        
         private static void ParamName(string paramName)
         {
-            if (paramName == null)
+            if (paramName is null)
             { throw new ArgumentNullException(paramName: nameof(paramName)); }
 
             if (paramName == string.Empty)
