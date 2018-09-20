@@ -9,7 +9,7 @@
     <Product>Thought Haven Guard clauses</Product>
     <Description>A simple library for handling argument guard clauses.</Description>
     <Copyright>© Thought Haven. All rights reserved.</Copyright>
-    <Version>0.101.0</Version>
+    <Version>0.101.1</Version>
   </PropertyGroup>
 
 </Project>
