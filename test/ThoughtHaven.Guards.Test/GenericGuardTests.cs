@@ -50,7 +50,7 @@ namespace ThoughtHaven.Guards
                 {
                     var exception = Assert.Throws<ArgumentNullException>("value", () =>
                     {
-                        Guard.Null("value", value: (object)null);
+                        Guard.Null<object>("value", value: null);
                     });
 
                     Assert.Equal("Value cannot be null.\r\nParameter name: value",
@@ -58,9 +58,19 @@ namespace ThoughtHaven.Guards
                 }
 
                 [Fact]
-                public void WithValue_ReturnsValue()
+                public void WithReferenceTypeValue_ReturnsValue()
                 {
                     var value = new object();
+
+                    var result = Guard.Null(nameof(value), value);
+
+                    Assert.Equal(value, result);
+                }
+
+                [Fact]
+                public void WithValueTypeValue_ReturnsValue()
+                {
+                    var value = 5;
 
                     var result = Guard.Null(nameof(value), value);
 

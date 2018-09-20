@@ -7,8 +7,10 @@ namespace ThoughtHaven
         public static T Null<T>(string paramName, T value)
         {
             ParamName(paramName);
+
+            object @object = value;
             
-            if (value == null) { throw new ArgumentNullException(paramName); }
+            if (@object is null) { throw new ArgumentNullException(paramName); }
 
             return value;
         }
