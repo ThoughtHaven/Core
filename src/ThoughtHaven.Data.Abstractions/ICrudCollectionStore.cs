@@ -2,5 +2,6 @@
 {
     public interface ICrudCollectionStore<TKey, TData>
         : ICrudStore<TKey, TData>, IRetrieveCollectionOperation<TData>
+        where TData : class
     { }
 }

@@ -2,5 +2,6 @@
 {
     public interface IPageableCrudCollectionStore<TKey, TData>
         : ICrudCollectionStore<TKey, TData>, IRetrievePageableCollectionOperation<TData>
+        where TData : class
     { }
 }

@@ -5,5 +5,6 @@
         ICreateOperation<TData>,
         IUpdateOperation<TData>,
         IDeleteOperation<TKey>
+        where TData : class
     { }
 }
