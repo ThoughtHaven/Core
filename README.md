@@ -3,7 +3,7 @@ Thought Haven Core
 
 Low-level libraries and helpers for use in any application.
 
-Find guard clause helpers, data abstractions, reflection extensions, and more so developers can write app code and be more productive.
+Find guard clause helpers, data abstractions, reflection extensions, and more that developers focus on app code and be more productive.
 
 ## Other projects:
 * [AspNetCore](https://github.com/ThoughtHaven/AspNetCore): Wrappers and helpers built on top of Microsoft's wonderful AspNetCore and MVC libraries. Get started faster and easier while following enforced best practices.
