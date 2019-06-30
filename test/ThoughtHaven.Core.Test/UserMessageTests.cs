@@ -14,7 +14,7 @@ namespace ThoughtHaven
                 {
                     Assert.Throws<ArgumentNullException>("message", () =>
                     {
-                        new UserMessage(message: null);
+                        new UserMessage(message: null!);
                     });
                 }
 
@@ -55,11 +55,11 @@ namespace ThoughtHaven
                 [Fact]
                 public void NullMessage_Throws()
                 {
-                    string message = null;
+                    string? message = null;
 
                     Assert.Throws<ArgumentNullException>("message", () =>
                     {
-                        UserMessage result = message;
+                        UserMessage result = message!;
                     });
                 }
 

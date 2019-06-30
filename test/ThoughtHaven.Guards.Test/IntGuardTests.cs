@@ -17,7 +17,7 @@ namespace ThoughtHaven.Guards
 
                     Assert.Throws<ArgumentNullException>("paramName", () =>
                     {
-                        Guard.LessThan(paramName: null, value: value, minimum: minimum);
+                        Guard.LessThan(paramName: null!, value: value, minimum: minimum);
                     });
                 }
 
@@ -96,7 +96,7 @@ namespace ThoughtHaven.Guards
 
                     Assert.Throws<ArgumentNullException>("paramName", () =>
                     {
-                        Guard.GreaterThan(paramName: null, value: value, maximum: maximum);
+                        Guard.GreaterThan(paramName: null!, value: value, maximum: maximum);
                     });
                 }
 
@@ -173,7 +173,7 @@ namespace ThoughtHaven.Guards
 
                     Assert.Throws<ArgumentNullException>("paramName", () =>
                     {
-                        Guard.OutOfRange(paramName: null, value: value, minimum: minimum,
+                        Guard.OutOfRange(paramName: null!, value: value, minimum: minimum,
                             maximum: maximum);
                     });
                 }

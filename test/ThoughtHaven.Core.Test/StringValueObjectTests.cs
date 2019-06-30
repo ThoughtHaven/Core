@@ -24,7 +24,7 @@ namespace ThoughtHaven
                 {
                     Assert.Throws<ArgumentNullException>("value", () =>
                     {
-                        new StringValueObject(value: null);
+                        new StringValueObject(value: null!);
                     });
                 }
 
@@ -62,7 +62,7 @@ namespace ThoughtHaven
                 {
                     Assert.Throws<ArgumentNullException>("validCharacters", () =>
                     {
-                        new StringValueObject("value", validCharacters: null);
+                        new StringValueObject("value", validCharacters: null!);
                     });
                 }
 

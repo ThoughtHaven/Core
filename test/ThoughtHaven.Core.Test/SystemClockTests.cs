@@ -27,7 +27,7 @@ namespace ThoughtHaven
 
                     var result = systemClock.UtcNow;
 
-                    Assert.NotEqual(default(DateTimeOffset), result);
+                    Assert.NotEqual(default, result);
                 }
             }
         }

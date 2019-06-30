@@ -35,7 +35,7 @@ namespace ThoughtHaven
                     {
                         Assert.Throws<ArgumentNullException>("failure", () =>
                         {
-                            new Result<object>(failure: null);
+                            new Result<object>(failure: null!);
                         });
                     }
 
@@ -66,11 +66,11 @@ namespace ThoughtHaven
                     [Fact]
                     public void NullFailure_Throws()
                     {
-                        string nullFailure = null;
+                        string? nullFailure = null;
 
                         Assert.Throws<ArgumentNullException>("failure", () =>
                         {
-                            Result<object> result = nullFailure;
+                            Result<object> result = nullFailure!;
                         });
                     }
 

@@ -14,7 +14,7 @@ namespace ThoughtHaven.Contacts
                 {
                     Assert.Throws<ArgumentNullException>("value", () =>
                     {
-                        new EmailAddress(value: null);
+                        new EmailAddress(value: null!);
                     });
                 }
 
@@ -72,11 +72,11 @@ namespace ThoughtHaven.Contacts
                 [Fact]
                 public void NullValue_Throws()
                 {
-                    string value = null;
+                    string? value = null;
 
                     Assert.Throws<ArgumentNullException>("value", () =>
                     {
-                        EmailAddress email = value;
+                        EmailAddress email = value!;
                     });
                 }
 

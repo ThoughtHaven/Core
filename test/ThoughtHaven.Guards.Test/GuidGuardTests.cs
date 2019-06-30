@@ -14,7 +14,7 @@ namespace ThoughtHaven.Guards
                 {
                     Assert.Throws<ArgumentNullException>("paramName", () =>
                     {
-                        Guard.Empty(paramName: null, value: Guid.NewGuid());
+                        Guard.Empty(paramName: null!, value: Guid.NewGuid());
                     });
                 }
 

@@ -13,11 +13,11 @@ namespace ThoughtHaven.Reflection
                 [Fact]
                 public void NullObject_Throws()
                 {
-                    Uri nullUri = null;
+                    Uri? nullUri = null;
 
                     Assert.Throws<ArgumentNullException>("object", () =>
                     {
-                        nullUri.Implements<IAsyncResult>();
+                        nullUri!.Implements<IAsyncResult>();
                     });
                 }
 

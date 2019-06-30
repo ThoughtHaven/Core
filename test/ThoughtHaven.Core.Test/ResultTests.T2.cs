@@ -26,7 +26,7 @@ namespace ThoughtHaven
                     {
                         Assert.Throws<ArgumentNullException>("value", () =>
                         {
-                            new Result<string, object>(value: null);
+                            new Result<string, object>(value: null!);
                         });
                     }
 
@@ -65,7 +65,7 @@ namespace ThoughtHaven
                     {
                         Assert.Throws<ArgumentNullException>("failure", () =>
                         {
-                            new Result<string, object>(failure: null);
+                            new Result<string, object>(failure: null!);
                         });
                     }
 
@@ -84,7 +84,7 @@ namespace ThoughtHaven
                         var failure = new object();
                         var result = new Result<object, object>(failure: failure);
 
-                        Assert.Equal(default(object), result.Value);
+                        Assert.Equal(default, result.Value);
                     }
 
                     [Fact]
@@ -107,7 +107,7 @@ namespace ThoughtHaven
                     {
                         Assert.Throws<ArgumentNullException>("value", () =>
                         {
-                            Result<string, object> result = (string)null;
+                            Result<string, object> result = (string)null!;
                         });
                     }
 
@@ -135,7 +135,7 @@ namespace ThoughtHaven
                         var value = new object();
                         Result<object, Exception> result = value;
 
-                        Assert.Equal(default(Exception), result.Failure);
+                        Assert.Equal(default, result.Failure);
                     }
                 }
 
@@ -146,7 +146,7 @@ namespace ThoughtHaven
                     {
                         Assert.Throws<ArgumentNullException>("failure", () =>
                         {
-                            Result<string, object> result = (object)null;
+                            Result<string, object> result = (object)null!;
                         });
                     }
 
@@ -165,7 +165,7 @@ namespace ThoughtHaven
                         var failure = new Exception();
                         Result<object, Exception> result = failure;
 
-                        Assert.Equal(default(object), result.Value);
+                        Assert.Equal(default, result.Value);
                     }
 
                     [Fact]

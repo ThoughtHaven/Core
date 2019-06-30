@@ -4,7 +4,7 @@ namespace ThoughtHaven
 {
     public static partial class Guard
     {
-        public static string NullOrEmpty(string paramName, string value)
+        public static string NullOrEmpty(string paramName, string? value)
         {
             if (string.IsNullOrEmpty(Null(paramName, value)))
             {
@@ -12,10 +12,10 @@ namespace ThoughtHaven
                     message: "Value cannot be empty.");
             }
 
-            return value;
+            return value!;
         }
 
-        public static string NullOrWhiteSpace(string paramName, string value)
+        public static string NullOrWhiteSpace(string paramName, string? value)
         {
             if (string.IsNullOrWhiteSpace(NullOrEmpty(paramName, value)))
             {
@@ -23,7 +23,7 @@ namespace ThoughtHaven
                     message: "Value cannot be white space.");
             }
 
-            return value;
+            return value!;
         }
     }
 }

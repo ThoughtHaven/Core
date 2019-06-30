@@ -1,11 +1,11 @@
 ﻿namespace ThoughtHaven.Commerce
 {
-    public class USD
+    public class Usd
     {
         public int Cents { get; }
         public string DisplayPrice => this.ToString().Replace(".00", string.Empty);
 
-        public USD(int cents)
+        public Usd(int cents)
         {
             this.Cents = Guard.LessThan(nameof(cents), cents, minimum: 0);
         }
@@ -28,20 +28,20 @@
 
         public override bool Equals(object obj)
         {
-            var usd = obj as USD;
+            Usd? usd = obj as Usd;
 
-            return usd != null ? this == usd : base.Equals(obj);
+            return !(usd is null) ? this == usd : base.Equals(obj);
         }
 
-        public static bool operator ==(USD x, USD y)
+        public static bool operator ==(Usd x, Usd y)
         {
-            if (object.ReferenceEquals(x, y)) { return true; }
+            if (ReferenceEquals(x, y)) { return true; }
 
-            if (((object)x == null) || ((object)y == null)) { return false; }
+            if ((x is null) || (y is null)) { return false; }
 
             return x.Cents == y.Cents;
         }
 
-        public static bool operator !=(USD x, USD y) => !(x == y);
+        public static bool operator !=(Usd x, Usd y) => !(x == y);
     }
 }

@@ -15,7 +15,7 @@ namespace ThoughtHaven.Guards
                 {
                     Assert.Throws<ArgumentNullException>("paramName", () =>
                     {
-                        Guard.NoItems(paramName: null, value: "valid");
+                        Guard.NoItems(paramName: null!, value: "valid");
                     });
                 }
 
@@ -40,11 +40,11 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void NullValue_Throws()
                 {
-                    IEnumerable<string> @null = null;
+                    IEnumerable<string>? @null = null;
 
                     Assert.Throws<ArgumentNullException>(nameof(@null), () =>
                     {
-                        Guard.NoItems(nameof(@null), @null);
+                        Guard.NoItems(nameof(@null), @null!);
                     });
                 }
 
@@ -83,7 +83,7 @@ namespace ThoughtHaven.Guards
                 {
                     Assert.Throws<ArgumentNullException>("paramName", () =>
                     {
-                        Guard.NullItem(paramName: null, value: "valid");
+                        Guard.NullItem(paramName: null!, value: "valid");
                     });
                 }
 
@@ -108,18 +108,18 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void NullValue_Throws()
                 {
-                    IEnumerable<string> @null = null;
+                    IEnumerable<string>? @null = null;
 
                     Assert.Throws<ArgumentNullException>(nameof(@null), () =>
                     {
-                        Guard.NullItem(nameof(@null), @null);
+                        Guard.NullItem(nameof(@null), @null!);
                     });
                 }
 
                 [Fact]
                 public void ValueHasNullItem_Throws()
                 {
-                    IEnumerable<string> hasNullItem = new string[] { "item1", null, "item2" };
+                    IEnumerable<string> hasNullItem = new string[] { "item1", null!, "item2" };
 
                     var exception = Assert.Throws<ArgumentException>(nameof(hasNullItem), () =>
                     {

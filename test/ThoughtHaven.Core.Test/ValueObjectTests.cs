@@ -24,7 +24,7 @@ namespace ThoughtHaven
                 {
                     Assert.Throws<ArgumentNullException>("value", () =>
                         {
-                            new ValueObject<object>(value: null);
+                            new ValueObject<object>(value: null!);
                         });
                 }
 
@@ -86,9 +86,9 @@ namespace ThoughtHaven
                 {
                     var value = new object();
                     var valueObject = new ValueObject<object>(value);
-                    object compareObject = null;
+                    object? compareObject = null;
 
-                    Assert.False(valueObject.Equals(compareObject));
+                    Assert.False(valueObject.Equals(compareObject!));
                 }
 
                 [Fact]
@@ -139,9 +139,9 @@ namespace ThoughtHaven
                 {
                     var value = new object();
                     var valueObject = new ValueObject<object>(value);
-                    ValueObject<object> compareObject = null;
+                    ValueObject<object>? compareObject = null;
 
-                    Assert.False(valueObject.Equals(compareObject));
+                    Assert.False(valueObject.Equals(compareObject!));
                 }
 
                 [Fact]
@@ -183,9 +183,9 @@ namespace ThoughtHaven
             {
                 var value = new object();
                 var valueObject = new ValueObject<object>(value);
-                ValueObject<object> compareObject = null;
+                ValueObject<object>? compareObject = null;
 
-                Assert.False(valueObject == compareObject);
+                Assert.False(valueObject == compareObject!);
             }
 
             [Fact]
@@ -226,9 +226,9 @@ namespace ThoughtHaven
             {
                 var value = new object();
                 var valueObject = new ValueObject<object>(value);
-                ValueObject<object> compareObject = null;
+                ValueObject<object>? compareObject = null;
 
-                Assert.True(valueObject != compareObject);
+                Assert.True(valueObject != compareObject!);
             }
 
             [Fact]

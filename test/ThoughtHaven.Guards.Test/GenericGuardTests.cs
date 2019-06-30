@@ -14,7 +14,7 @@ namespace ThoughtHaven.Guards
                 {
                     var exception = Assert.Throws<ArgumentNullException>("paramName", () =>
                     {
-                        Guard.Null(paramName: null, value: new object());
+                        Guard.Null(paramName: null!, value: new object());
                     });
 
                     Assert.Equal("Value cannot be null.\r\nParameter name: paramName",
@@ -50,7 +50,7 @@ namespace ThoughtHaven.Guards
                 {
                     var exception = Assert.Throws<ArgumentNullException>("value", () =>
                     {
-                        Guard.Null<object>("value", value: null);
+                        Guard.Null<object>("value", value: null!);
                     });
 
                     Assert.Equal("Value cannot be null.\r\nParameter name: value",

@@ -14,7 +14,7 @@ namespace ThoughtHaven.Contacts
                 {
                     Assert.Throws<ArgumentNullException>("from", () =>
                     {
-                        new EmailMessage(from: null, to: new EmailContact("to@email.com"),
+                        new EmailMessage(from: null!, to: new EmailContact("to@email.com"),
                             subject: "subject", content: EmailContent.PlainText("value"));
                     });
                 }
@@ -24,7 +24,7 @@ namespace ThoughtHaven.Contacts
                 {
                     Assert.Throws<ArgumentNullException>("to", () =>
                     {
-                        new EmailMessage(from: new EmailContact("from@email.com"), to: null,
+                        new EmailMessage(from: new EmailContact("from@email.com"), to: null!,
                             subject: "subject", content: EmailContent.PlainText("value"));
                     });
                 }
@@ -35,7 +35,7 @@ namespace ThoughtHaven.Contacts
                     Assert.Throws<ArgumentNullException>("subject", () =>
                     {
                         new EmailMessage(from: new EmailContact("from@email.com"),
-                            to: new EmailContact("to@email.com"), subject: null,
+                            to: new EmailContact("to@email.com"), subject: null!,
                             content: EmailContent.PlainText("value"));
                     });
                 }
@@ -69,7 +69,7 @@ namespace ThoughtHaven.Contacts
                     {
                         new EmailMessage(from: new EmailContact("from@email.com"),
                             to: new EmailContact("to@email.com"), subject: "subject",
-                            content: null);
+                            content: null!);
                     });
                 }
 
@@ -129,7 +129,7 @@ namespace ThoughtHaven.Contacts
                     Assert.Throws<ArgumentNullException>("from", () =>
                     {
                         new EmailMessage(
-                            from: null,
+                            from: null!,
                             to: new EmailContact[] { new EmailContact("to@email.com") },
                             subject: "subject",
                             contents: new EmailContent[] { EmailContent.PlainText("value") });
@@ -143,7 +143,7 @@ namespace ThoughtHaven.Contacts
                     {
                         new EmailMessage(
                             from: new EmailContact("from@email.com"),
-                            to: null,
+                            to: null!,
                             subject: "subject",
                             contents: new EmailContent[] { EmailContent.PlainText("value") });
                     });
@@ -156,7 +156,7 @@ namespace ThoughtHaven.Contacts
                     {
                         new EmailMessage(
                             from: new EmailContact("from@email.com"),
-                            to: new EmailContact[] { null },
+                            to: new EmailContact[] { null! },
                             subject: "subject",
                             contents: new EmailContent[0]);
                     });
@@ -169,7 +169,7 @@ namespace ThoughtHaven.Contacts
                     {
                         new EmailMessage(
                             from: new EmailContact("from@email.com"),
-                            to: new EmailContact[] { null },
+                            to: new EmailContact[] { null! },
                             subject: "subject",
                             contents: new EmailContent[] { EmailContent.PlainText("value") });
                     });
@@ -183,7 +183,7 @@ namespace ThoughtHaven.Contacts
                         new EmailMessage(
                             from: new EmailContact("from@email.com"),
                             to: new EmailContact[] { new EmailContact("to@email.com") },
-                            subject: null,
+                            subject: null!,
                             contents: new EmailContent[] { EmailContent.PlainText("value") });
                     });
                 }
@@ -223,7 +223,7 @@ namespace ThoughtHaven.Contacts
                             from: new EmailContact("from@email.com"),
                             to: new EmailContact[] { new EmailContact("to@email.com") },
                             subject: "subject",
-                            contents: null);
+                            contents: null!);
                     });
                 }
 
@@ -245,7 +245,7 @@ namespace ThoughtHaven.Contacts
                     {
                         new EmailMessage(from: new EmailContact("from@email.com"),
                             to: new EmailContact[] { new EmailContact("to@email.com") },
-                            subject: "subject", contents: new EmailContent[] { null });
+                            subject: "subject", contents: new EmailContent[] { null! });
                     });
                 }
 

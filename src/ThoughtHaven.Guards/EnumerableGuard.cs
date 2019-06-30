@@ -7,7 +7,7 @@ namespace ThoughtHaven
     {
         public static IEnumerable<T> NoItems<T>(string paramName, IEnumerable<T> value)
         {
-            if (!HasItems(Null(paramName, value)))
+            if (!HasItems(Null(paramName, value!)))
             {
                 throw new ArgumentException(paramName: paramName,
                     message: $"Value cannot contain no items.");

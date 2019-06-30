@@ -8,14 +8,12 @@ namespace ThoughtHaven
         {
             ParamName(paramName);
 
-            object @object = value;
-            
-            if (@object is null) { throw new ArgumentNullException(paramName); }
+            if (value is null) { throw new ArgumentNullException(paramName); }
 
             return value;
         }
         
-        private static void ParamName(string paramName)
+        private static void ParamName(string? paramName)
         {
             if (paramName is null)
             { throw new ArgumentNullException(paramName: nameof(paramName)); }

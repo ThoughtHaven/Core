@@ -14,7 +14,7 @@ namespace ThoughtHaven.Contacts
                 {
                     Assert.Throws<ArgumentNullException>("address", () =>
                     {
-                        LandAddress.Parse(address: null);
+                        LandAddress.Parse(address: null!);
                     });
                 }
 
@@ -72,7 +72,7 @@ namespace ThoughtHaven.Contacts
                     Assert.Throws<ArgumentNullException>("streetAddress", () =>
                     {
                         new LandAddress(
-                            streetAddress: null,
+                            streetAddress: null!,
                             city: "City",
                             state: "State",
                             country: "USA",
@@ -115,7 +115,7 @@ namespace ThoughtHaven.Contacts
                     {
                         new LandAddress(
                             streetAddress: "123 Fake Street",
-                            city: null,
+                            city: null!,
                             state: "State",
                             country: "USA",
                             postalCode: "12345");
@@ -158,7 +158,7 @@ namespace ThoughtHaven.Contacts
                         new LandAddress(
                             streetAddress: "123 Fake Street",
                             city: "City",
-                            state: null,
+                            state: null!,
                             country: "USA",
                             postalCode: "12345");
                     });
@@ -201,7 +201,7 @@ namespace ThoughtHaven.Contacts
                             streetAddress: "123 Fake Street",
                             city: "City",
                             state: "State",
-                            country: null,
+                            country: null!,
                             postalCode: "12345");
                     });
                 }
@@ -244,7 +244,7 @@ namespace ThoughtHaven.Contacts
                             city: "City",
                             state: "State",
                             country: "USA",
-                            postalCode: null);
+                            postalCode: null!);
                     });
                 }
 

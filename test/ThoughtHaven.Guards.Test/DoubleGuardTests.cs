@@ -3,17 +3,17 @@ using Xunit;
 
 namespace ThoughtHaven.Guards
 {
-    public class LongGuardTests
+    public class DoubleGuardTests
     {
         public class LessThanMethod
         {
-            public class ParamNameAndLongValueAndMinimumOverload
+            public class ParamNameAndDoubleValueAndMinimumOverload
             {
                 [Fact]
                 public void NullParamName_Throws()
                 {
-                    long value = 1;
-                    long minimum = 0;
+                    double value = 1;
+                    double minimum = 0;
 
                     Assert.Throws<ArgumentNullException>("paramName", () =>
                     {
@@ -24,8 +24,8 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void EmptyParamName_Throws()
                 {
-                    long value = 1;
-                    long minimum = 0;
+                    double value = 1;
+                    double minimum = 0;
 
                     Assert.Throws<ArgumentException>("paramName", () =>
                     {
@@ -36,8 +36,8 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void WhiteSpaceParamName_Throws()
                 {
-                    long value = 1;
-                    long minimum = 0;
+                    double value = 1;
+                    double minimum = 0;
 
                     Assert.Throws<ArgumentException>("paramName", () =>
                     {
@@ -48,8 +48,8 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void ValueBelowMinimum_Throws()
                 {
-                    long value = -1;
-                    long minimum = 0;
+                    double value = -1;
+                    double minimum = 0;
 
                     var exception = Assert.Throws<ArgumentOutOfRangeException>(nameof(value), () =>
                     {
@@ -63,10 +63,10 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void ValueAboveMinimum_ReturnsValue()
                 {
-                    long value = 1;
-                    long minimum = 0;
+                    double value = 1;
+                    double minimum = 0;
 
-                    long result = Guard.LessThan(nameof(value), value, minimum);
+                    double result = Guard.LessThan(nameof(value), value, minimum);
 
                     Assert.Equal(value, result);
                 }
@@ -74,10 +74,10 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void ValueEqualToMinimum_ReturnsValue()
                 {
-                    long value = 1;
-                    long minimum = 1;
+                    double value = 1;
+                    double minimum = 1;
 
-                    long result = Guard.LessThan(nameof(value), value, minimum);
+                    double result = Guard.LessThan(nameof(value), value, minimum);
 
                     Assert.Equal(value, result);
                 }
@@ -86,13 +86,13 @@ namespace ThoughtHaven.Guards
 
         public class GreaterThanMethod
         {
-            public class ParamNameAndLongValueAndMaximumOverload
+            public class ParamNameAndDoubleValueAndMaximumOverload
             {
                 [Fact]
                 public void NullParamName_Throws()
                 {
-                    long value = 1;
-                    long maximum = 2;
+                    double value = 1;
+                    double maximum = 2;
 
                     Assert.Throws<ArgumentNullException>("paramName", () =>
                     {
@@ -103,8 +103,8 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void EmptyParamName_Throws()
                 {
-                    long value = 1;
-                    long maximum = 2;
+                    double value = 1;
+                    double maximum = 2;
 
                     Assert.Throws<ArgumentException>("paramName", () =>
                     {
@@ -115,8 +115,8 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void WhiteSpaceParamName_Throws()
                 {
-                    long value = 1;
-                    long maximum = 2;
+                    double value = 1;
+                    double maximum = 2;
 
                     Assert.Throws<ArgumentException>("paramName", () =>
                     {
@@ -127,8 +127,8 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void ValueAboveMaximum_Throws()
                 {
-                    long value = 3;
-                    long maximum = 2;
+                    double value = 3;
+                    double maximum = 2;
 
                     var exception = Assert.Throws<ArgumentOutOfRangeException>(nameof(value), () =>
                     {
@@ -142,10 +142,10 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void ValueBelowMaximum_ReturnsValue()
                 {
-                    long value = 1;
-                    long maximum = 2;
+                    double value = 1;
+                    double maximum = 2;
 
-                    long result = Guard.GreaterThan(nameof(value), value, maximum);
+                    double result = Guard.GreaterThan(nameof(value), value, maximum);
 
                     Assert.Equal(value, result);
                 }
@@ -153,10 +153,10 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void ValueEqualToMaximum_ReturnsValue()
                 {
-                    long value = 2;
-                    long maximum = 2;
+                    double value = 2;
+                    double maximum = 2;
 
-                    long result = Guard.GreaterThan(nameof(value), value, maximum);
+                    double result = Guard.GreaterThan(nameof(value), value, maximum);
 
                     Assert.Equal(value, result);
                 }
@@ -165,14 +165,14 @@ namespace ThoughtHaven.Guards
 
         public class OutOfRangeMethod
         {
-            public class ParamNameAndLongValueAndMinimumAndMaximumOverload
+            public class ParamNameAndDoubleValueAndMinimumAndMaximumOverload
             {
                 [Fact]
                 public void NullParamName_Throws()
                 {
-                    long value = 1;
-                    long minimum = 0;
-                    long maximum = 2;
+                    double value = 1;
+                    double minimum = 0;
+                    double maximum = 2;
 
                     Assert.Throws<ArgumentNullException>("paramName", () =>
                     {
@@ -184,9 +184,9 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void EmptyParamName_Throws()
                 {
-                    long value = 1;
-                    long minimum = 0;
-                    long maximum = 2;
+                    double value = 1;
+                    double minimum = 0;
+                    double maximum = 2;
 
                     Assert.Throws<ArgumentException>("paramName", () =>
                     {
@@ -198,9 +198,9 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void WhiteSpaceParamName_Throws()
                 {
-                    long value = 1;
-                    long minimum = 0;
-                    long maximum = 2;
+                    double value = 1;
+                    double minimum = 0;
+                    double maximum = 2;
 
                     Assert.Throws<ArgumentException>("paramName", () =>
                     {
@@ -212,9 +212,9 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void ValueBelowMinimum_Throws()
                 {
-                    long value = -1;
-                    long minimum = 0;
-                    long maximum = 2;
+                    double value = -1;
+                    double minimum = 0;
+                    double maximum = 2;
 
                     Assert.Throws<ArgumentOutOfRangeException>(nameof(value), () =>
                     {
@@ -225,9 +225,9 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void ValueAboveMaximum_Throws()
                 {
-                    long value = 3;
-                    long minimum = 0;
-                    long maximum = 2;
+                    double value = 3;
+                    double minimum = 0;
+                    double maximum = 2;
 
                     Assert.Throws<ArgumentOutOfRangeException>(nameof(value), () =>
                     {
@@ -238,9 +238,9 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void ValueBetweenMinimumAndMaximum_ReturnsValue()
                 {
-                    long value = 1;
-                    long minimum = 0;
-                    long maximum = 2;
+                    double value = 1;
+                    double minimum = 0;
+                    double maximum = 2;
 
                     var result = Guard.OutOfRange(nameof(value), value, minimum, maximum);
 
@@ -250,9 +250,9 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void ValueEqualToMinimum_ReturnsValue()
                 {
-                    long value = 0;
-                    long minimum = 0;
-                    long maximum = 2;
+                    double value = 0;
+                    double minimum = 0;
+                    double maximum = 2;
 
                     var result = Guard.OutOfRange(nameof(value), value, minimum, maximum);
 
@@ -262,9 +262,9 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void ValueEqualToMaximum_ReturnsValue()
                 {
-                    long value = 2;
-                    long minimum = 0;
-                    long maximum = 2;
+                    double value = 2;
+                    double minimum = 0;
+                    double maximum = 2;
 
                     var result = Guard.OutOfRange(nameof(value), value, minimum, maximum);
 

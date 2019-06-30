@@ -3,9 +3,9 @@
     public class EmailContact
     {
         public EmailAddress Email { get; }
-        public string Name { get; }
+        public string? Name { get; }
 
-        public EmailContact(EmailAddress email, string name = null)
+        public EmailContact(EmailAddress email, string? name = null)
         {
             this.Email = Guard.Null(nameof(email), email);
 

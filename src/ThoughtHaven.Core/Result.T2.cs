@@ -1,14 +1,21 @@
 ﻿namespace ThoughtHaven
 {
     public class Result<TValue, TFailure> : Result<TFailure>
+        where TValue : class
+        where TFailure : class
     {
-        public TValue Value { get; }
+        public TValue? Value { get; }
 
         public Result(TValue value) : this(success: true, value: value) { }
 
-        public Result(TFailure failure) : base(failure) { }
+        public Result(TFailure failure)
+            : base(failure)
+        {
+            this.Value = default;
+        }
 
-        protected Result(bool success, TValue value) : base(success)
+        protected Result(bool success, TValue value)
+            : base(success)
         {
             this.Value = Guard.Null(nameof(value), value);
         }

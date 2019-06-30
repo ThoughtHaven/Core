@@ -14,7 +14,7 @@ namespace ThoughtHaven.Contacts
                 {
                     Assert.Throws<ArgumentNullException>("type", () =>
                     {
-                        new EmailContent(type: null, value: "value");
+                        new EmailContent(type: null!, value: "value");
                     });
                 }
 
@@ -41,7 +41,7 @@ namespace ThoughtHaven.Contacts
                 {
                     Assert.Throws<ArgumentNullException>("value", () =>
                     {
-                        new EmailContent(type: "text/plain", value: null);
+                        new EmailContent(type: "text/plain", value: null!);
                     });
                 }
 
@@ -106,7 +106,7 @@ namespace ThoughtHaven.Contacts
                 {
                     Assert.Throws<ArgumentNullException>("value", () =>
                     {
-                        EmailContent.PlainText(value: null);
+                        EmailContent.PlainText(value: null!);
                     });
                 }
 
@@ -139,7 +139,7 @@ namespace ThoughtHaven.Contacts
                 {
                     Assert.Throws<ArgumentNullException>("value", () =>
                     {
-                        EmailContent.Html(value: null);
+                        EmailContent.Html(value: null!);
                     });
                 }
 

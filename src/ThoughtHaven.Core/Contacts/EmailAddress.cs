@@ -4,9 +4,9 @@ namespace ThoughtHaven.Contacts
 {
     public class EmailAddress : StringValueObject
     {
-        public EmailAddress(string value) : base(value?.Trim().ToLower())
+        public EmailAddress(string value) : base(value?.Trim().ToLower()!)
         {
-            if (!value.Contains("@"))
+            if (!value!.Contains("@"))
             {
                 throw new ArgumentException(
                     paramName: nameof(value),

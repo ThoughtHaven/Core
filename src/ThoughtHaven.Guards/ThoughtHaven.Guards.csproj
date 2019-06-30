@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
@@ -9,7 +9,10 @@
     <Product>Thought Haven Guard clauses</Product>
     <Description>A simple library for handling argument guard clauses.</Description>
     <Copyright>© Thought Haven. All rights reserved.</Copyright>
-    <Version>0.101.1</Version>
+    <Version>0.102.0</Version>
+    <LangVersion>8.0</LangVersion>
+    <!--<Nullable>enable</Nullable>-->
+    <NullableContextOptions>enable</NullableContextOptions>
   </PropertyGroup>
 
 </Project>

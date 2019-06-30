@@ -15,7 +15,7 @@ namespace ThoughtHaven.Reflection
                 {
                     Assert.Throws<ArgumentNullException>("type", () =>
                     {
-                        ((Type)null).HasDefaultConstructor();
+                        ((Type)null!).HasDefaultConstructor();
                     });
                 }
 
@@ -44,11 +44,11 @@ namespace ThoughtHaven.Reflection
                 [Fact]
                 public void Null_Throws()
                 {
-                    Type nullType = null;
+                    Type? nullType = null;
 
                     Assert.Throws<ArgumentNullException>("type", () =>
                     {
-                        nullType.Implements<IAsyncResult>();
+                        nullType!.Implements<IAsyncResult>();
                     });
                 }
 

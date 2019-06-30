@@ -9,17 +9,19 @@ namespace ThoughtHaven
 
         public ValueObject(T value) { this.Value = Guard.Null(nameof(value), value); }
 
-        public override int GetHashCode() => this.Value.GetHashCode();
+        public override int GetHashCode() => this.Value!.GetHashCode();
 
-        public override bool Equals(object obj) => this == obj as ValueObject<T>;
+        public override bool Equals(object obj) => Equals(this, obj as ValueObject<T>);
 
-        public virtual bool Equals(ValueObject<T> other) => this == other;
+        public virtual bool Equals(ValueObject<T> other) => Equals(this, other);
 
-        public static bool operator ==(ValueObject<T> x, ValueObject<T> y)
+        public static bool operator ==(ValueObject<T> x, ValueObject<T> y) => Equals(x, y);
+
+        protected static bool Equals(ValueObject<T>? x, ValueObject<T>? y)
         {
             if (ReferenceEquals(x, y)) { return true; }
 
-            if (((object)x == null) || ((object)y == null)) { return false; }
+            if ((x is null) || (y is null)) { return false; }
 
             return EqualityComparer<T>.Default.Equals(x.Value, y.Value);
         }

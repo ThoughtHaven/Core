@@ -14,7 +14,7 @@ namespace ThoughtHaven.Guards
                 {
                     Assert.Throws<ArgumentNullException>("paramName", () =>
                     {
-                        Guard.NullOrEmpty(paramName: null, value: "valid");
+                        Guard.NullOrEmpty(paramName: null!, value: "valid");
                     });
                 }
 
@@ -39,7 +39,7 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void NullValue_Throws()
                 {
-                    string @null = null;
+                    string? @null = null;
 
                     Assert.Throws<ArgumentNullException>(nameof(@null), () =>
                     {
@@ -92,7 +92,7 @@ namespace ThoughtHaven.Guards
                 {
                     Assert.Throws<ArgumentNullException>("paramName", () =>
                     {
-                        Guard.NullOrWhiteSpace(paramName: null, value: "valid");
+                        Guard.NullOrWhiteSpace(paramName: null!, value: "valid");
                     });
                 }
 
@@ -117,7 +117,7 @@ namespace ThoughtHaven.Guards
                 [Fact]
                 public void NullValue_Throws()
                 {
-                    string @null = null;
+                    string? @null = null;
 
                     Assert.Throws<ArgumentNullException>(nameof(@null), () =>
                     {

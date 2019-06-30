@@ -14,7 +14,7 @@ namespace ThoughtHaven.Contacts
                 {
                     Assert.Throws<ArgumentNullException>("email", () =>
                     {
-                        new EmailContact(email: null);
+                        new EmailContact(email: null!);
                     });
                 }
 
