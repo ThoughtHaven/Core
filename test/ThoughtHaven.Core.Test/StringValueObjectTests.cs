@@ -50,7 +50,7 @@ namespace ThoughtHaven
                 public void ValidValue_SetsValue()
                 {
                     var valid = new StringValueObject("valid");
-
+                    
                     Assert.Equal("valid", valid.Value);
                 }
             }

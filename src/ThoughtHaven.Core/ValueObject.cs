@@ -15,7 +15,7 @@ namespace ThoughtHaven
 
         public virtual bool Equals(ValueObject<T> other) => Equals(this, other);
 
-        public static bool operator ==(ValueObject<T> x, ValueObject<T> y) => Equals(x, y);
+        public static bool operator ==(ValueObject<T>? x, ValueObject<T>? y) => Equals(x, y);
 
         protected static bool Equals(ValueObject<T>? x, ValueObject<T>? y)
         {
@@ -26,6 +26,6 @@ namespace ThoughtHaven
             return EqualityComparer<T>.Default.Equals(x.Value, y.Value);
         }
 
-        public static bool operator !=(ValueObject<T> x, ValueObject<T> y) => !(x == y);
+        public static bool operator !=(ValueObject<T>? x, ValueObject<T>? y) => !(x == y);
     }
 }
