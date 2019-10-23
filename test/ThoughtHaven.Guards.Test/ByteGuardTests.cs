@@ -56,7 +56,7 @@ namespace ThoughtHaven.Guards
                         Guard.LessThan(nameof(value), value, minimum);
                     });
 
-                    Assert.Equal("Value of 0 is less than minimum value 1.\r\nParameter name: value",
+                    Assert.Equal("Value of 0 is less than minimum value 1. (Parameter 'value')",
                         exception.Message);
                 }
 

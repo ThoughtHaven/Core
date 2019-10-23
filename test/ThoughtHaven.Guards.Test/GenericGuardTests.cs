@@ -17,7 +17,7 @@ namespace ThoughtHaven.Guards
                         Guard.Null(paramName: null!, value: new object());
                     });
 
-                    Assert.Equal("Value cannot be null.\r\nParameter name: paramName",
+                    Assert.Equal("Value cannot be null. (Parameter 'paramName')",
                         exception.Message);
                 }
 
@@ -29,7 +29,7 @@ namespace ThoughtHaven.Guards
                         Guard.Null(paramName: "", value: new object());
                     });
 
-                    Assert.Equal("Value cannot be empty.\r\nParameter name: paramName",
+                    Assert.Equal("Value cannot be empty. (Parameter 'paramName')",
                         exception.Message);
                 }
 
@@ -41,7 +41,7 @@ namespace ThoughtHaven.Guards
                         Guard.Null(paramName: " ", value: new object());
                     });
 
-                    Assert.Equal("Value cannot be white space.\r\nParameter name: paramName",
+                    Assert.Equal("Value cannot be white space. (Parameter 'paramName')",
                         exception.Message);
                 }
 
@@ -53,7 +53,7 @@ namespace ThoughtHaven.Guards
                         Guard.Null<object>("value", value: null!);
                     });
 
-                    Assert.Equal("Value cannot be null.\r\nParameter name: value",
+                    Assert.Equal("Value cannot be null. (Parameter 'value')",
                         exception.Message);
                 }
 

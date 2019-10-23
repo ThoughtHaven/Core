@@ -57,7 +57,7 @@ namespace ThoughtHaven.Guards
                         Guard.NullOrEmpty(nameof(empty), empty);
                     });
 
-                    Assert.Equal("Value cannot be empty.\r\nParameter name: empty",
+                    Assert.Equal("Value cannot be empty. (Parameter 'empty')",
                         exception.Message);
                 }
 
@@ -146,7 +146,7 @@ namespace ThoughtHaven.Guards
                         Guard.NullOrWhiteSpace(nameof(whitespace), whitespace);
                     });
 
-                    Assert.Equal("Value cannot be white space.\r\nParameter name: whitespace",
+                    Assert.Equal("Value cannot be white space. (Parameter 'whitespace')",
                         exception.Message);
                 }
 

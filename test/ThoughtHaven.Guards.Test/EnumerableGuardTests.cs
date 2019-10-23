@@ -58,7 +58,7 @@ namespace ThoughtHaven.Guards
                         Guard.NoItems(nameof(empty), empty);
                     });
 
-                    Assert.Equal("Value cannot contain no items.\r\nParameter name: empty",
+                    Assert.Equal("Value cannot contain no items. (Parameter 'empty')",
                         exception.Message);
                 }
 
@@ -126,7 +126,7 @@ namespace ThoughtHaven.Guards
                         Guard.NullItem(nameof(hasNullItem), hasNullItem);
                     });
 
-                    Assert.Equal("Collection contains a null item at the index: 1.\r\nParameter name: hasNullItem",
+                    Assert.Equal("Collection contains a null item at the index: 1. (Parameter 'hasNullItem')",
                         exception.Message);
                 }
 

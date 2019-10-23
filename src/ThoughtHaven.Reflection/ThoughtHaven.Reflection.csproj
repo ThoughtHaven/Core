@@ -8,10 +8,9 @@
     <Description>Thought Haven's reflection helpers and extensions.</Description>
     <Copyright>© Thought Haven. All rights reserved.</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.102.0</Version>
+    <Version>0.103.0</Version>
     <LangVersion>8.0</LangVersion>
-    <!--<Nullable>enable</Nullable>-->
-    <NullableContextOptions>enable</NullableContextOptions>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
 </Project>

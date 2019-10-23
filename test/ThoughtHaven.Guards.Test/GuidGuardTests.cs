@@ -47,7 +47,7 @@ namespace ThoughtHaven.Guards
                         Guard.Empty(paramName: paramName, value: empty);
                     });
 
-                    Assert.Equal("Value cannot be an empty Guid.\r\nParameter name: empty",
+                    Assert.Equal("Value cannot be an empty Guid. (Parameter 'empty')",
                         exception.Message);
                 }
 

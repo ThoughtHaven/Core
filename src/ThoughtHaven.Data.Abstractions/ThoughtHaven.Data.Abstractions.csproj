@@ -9,10 +9,9 @@
     <Product>Thought Haven Data Abstractions</Product>
     <Description>Reuseable abstractions for common data access.</Description>
     <Copyright>© Thought Haven. All rights reserved.</Copyright>
-    <Version>0.102.1</Version>
+    <Version>0.103.0</Version>
     <LangVersion>8.0</LangVersion>
-    <!--<Nullable>enable</Nullable>-->
-    <NullableContextOptions>enable</NullableContextOptions>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
 </Project>

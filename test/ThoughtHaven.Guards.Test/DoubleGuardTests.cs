@@ -56,7 +56,7 @@ namespace ThoughtHaven.Guards
                         Guard.LessThan(nameof(value), value, minimum);
                     });
 
-                    Assert.Equal("Value of -1 is less than minimum value 0.\r\nParameter name: value",
+                    Assert.Equal("Value of -1 is less than minimum value 0. (Parameter 'value')",
                         exception.Message);
                 }
 
@@ -135,7 +135,7 @@ namespace ThoughtHaven.Guards
                         Guard.GreaterThan(nameof(value), value, maximum);
                     });
 
-                    Assert.Equal("Value of 3 is greater than maximum value 2.\r\nParameter name: value",
+                    Assert.Equal("Value of 3 is greater than maximum value 2. (Parameter 'value')",
                         exception.Message);
                 }
 

@@ -9,10 +9,9 @@
     <Product>Thought Haven Core</Product>
     <Description>Thought Haven's core library for universal helpers and functionality.</Description>
     <Copyright>© Thought Haven. All rights reserved.</Copyright>
-    <Version>0.104.2</Version>
+    <Version>0.105.0</Version>
     <LangVersion>8.0</LangVersion>
-    <!--<Nullable>enable</Nullable>-->
-    <NullableContextOptions>enable</NullableContextOptions>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
