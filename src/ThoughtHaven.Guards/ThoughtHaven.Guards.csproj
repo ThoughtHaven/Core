@@ -9,9 +9,10 @@
     <Product>Thought Haven Guard clauses</Product>
     <Description>A simple library for handling argument guard clauses.</Description>
     <Copyright>© Thought Haven. All rights reserved.</Copyright>
-    <Version>0.103.0</Version>
+    <Version>0.200.0</Version>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
+    <WarningsAsErrors>CS8600;CS8601;CS8602;CS8603;CS8604;CS8618;CS8625</WarningsAsErrors>
   </PropertyGroup>
 
 </Project>
