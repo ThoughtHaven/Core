@@ -14,6 +14,8 @@ namespace ThoughtHaven
         public int Hour => this.Offset.Hour;
         public int Minute => this.Offset.Minute;
 
+        public UtcDateTime(DateTimeOffset dateTime) : this(dateTime.UtcTicks) { }
+
         public UtcDateTime(long ticks)
         {
             this.Ticks = Guard.LessThan(nameof(ticks), ticks, minimum: 0);
@@ -23,7 +25,7 @@ namespace ThoughtHaven
         public DateTimeOffset ToOffset() => new DateTimeOffset(this.Ticks, TimeSpan.Zero);
 
         public static implicit operator UtcDateTime(DateTimeOffset dateTime) =>
-            new UtcDateTime(dateTime.UtcTicks);
+            new UtcDateTime(dateTime);
 
         public static implicit operator DateTimeOffset(UtcDateTime dateTime) =>
             dateTime.Offset;

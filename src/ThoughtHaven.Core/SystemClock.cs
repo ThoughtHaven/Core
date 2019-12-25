@@ -4,6 +4,6 @@ namespace ThoughtHaven
 {
     public class SystemClock
     {
-        public virtual DateTimeOffset UtcNow => DateTimeOffset.UtcNow;
+        public virtual UtcDateTime UtcNow => DateTimeOffset.UtcNow;
     }
 }

@@ -7,7 +7,7 @@ namespace ThoughtHaven
     {
         public class DayOfWeekProperty
         {
-            public class GetOperator
+            public class GetAccessor
             {
                 [Theory]
                 [InlineData(1)]
@@ -24,7 +24,7 @@ namespace ThoughtHaven
 
         public class YearProperty
         {
-            public class GetOperator
+            public class GetAccessor
             {
                 [Theory]
                 [InlineData(1)]
@@ -41,7 +41,7 @@ namespace ThoughtHaven
 
         public class MonthProperty
         {
-            public class GetOperator
+            public class GetAccessor
             {
                 [Theory]
                 [InlineData(1)]
@@ -58,7 +58,7 @@ namespace ThoughtHaven
 
         public class DayProperty
         {
-            public class GetOperator
+            public class GetAccessor
             {
                 [Theory]
                 [InlineData(1)]
@@ -75,7 +75,7 @@ namespace ThoughtHaven
 
         public class HourProperty
         {
-            public class GetOperator
+            public class GetAccessor
             {
                 [Theory]
                 [InlineData(1)]
@@ -92,7 +92,7 @@ namespace ThoughtHaven
 
         public class MinuteProperty
         {
-            public class GetOperator
+            public class GetAccessor
             {
                 [Theory]
                 [InlineData(1)]
@@ -109,6 +109,21 @@ namespace ThoughtHaven
 
         public class Constructor
         {
+            public class DateTimeOverload
+            {
+                [Theory]
+                [InlineData(1)]
+                [InlineData(1_000_000)]
+                public void WhenCalled_SetsTicks(long ticks)
+                {
+                    var dateTime = new DateTimeOffset(ticks, TimeSpan.Zero);
+
+                    var utc = new UtcDateTime(dateTime);
+
+                    Assert.Equal(dateTime.UtcTicks, utc.Ticks);
+                }
+            }
+
             public class TicksOverload
             {
                 [Fact]
