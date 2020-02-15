@@ -22,12 +22,6 @@ namespace ThoughtHaven
             this.Offset = new DateTimeOffset(this.Ticks, TimeSpan.Zero);
         }
 
-        public DateTimeOffset ToOffset() => new DateTimeOffset(this.Ticks, TimeSpan.Zero);
-
-        public static implicit operator UtcDateTime(DateTimeOffset dateTime) =>
-            new UtcDateTime(dateTime);
-
-        public static implicit operator DateTimeOffset(UtcDateTime dateTime) =>
-            dateTime.Offset;
+        public DateTimeOffset ToOffset() => this.Offset;
     }
 }

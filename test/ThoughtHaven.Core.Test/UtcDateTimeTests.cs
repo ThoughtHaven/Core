@@ -163,39 +163,5 @@ namespace ThoughtHaven
                 }
             }
         }
-
-        public class UtcDateTimeOperator
-        {
-            public class DateTimeOverload
-            {
-                [Fact]
-                public void WhenCalled_ReturnsOffset()
-                {
-                    var offset = DateTimeOffset.UtcNow;
-
-                    UtcDateTime utc = offset;
-
-                    Assert.Equal(offset.UtcTicks, utc.Ticks);
-                }
-            }
-        }
-
-        public class DateTimeOffsetOperator
-        {
-            public class DateTimeOverload
-            {
-                [Theory]
-                [InlineData(1)]
-                [InlineData(2)]
-                public void WhenCalled_ReturnsOffset(long ticks)
-                {
-                    var utc = new UtcDateTime(ticks);
-
-                    DateTimeOffset offset = utc;
-
-                    Assert.Equal(ticks, offset.UtcTicks);
-                }
-            }
-        }
     }
 }

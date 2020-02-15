@@ -17,7 +17,7 @@ namespace ThoughtHaven
                     var expected = DateTimeOffset.UtcNow;
                     var actual = systemClock.UtcNow;
 
-                    Assert.True(expected <= actual);
+                    Assert.True(expected <= actual.ToOffset());
                 }
 
                 [Fact]
