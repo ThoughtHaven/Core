@@ -163,5 +163,111 @@ namespace ThoughtHaven
                 }
             }
         }
+
+        public class EqualsOpertor
+        {
+            public class Utc1AndUtc2Overload
+            {
+                [Theory]
+                [InlineData(1, 1, true)]
+                [InlineData(1, 2, false)]
+                public void WhenCalled_ReturnsResult(int utc1Ticks, int utc2Ticks, bool expected)
+                {
+                    var utc1 = new UtcDateTime(utc1Ticks);
+                    var utc2 = new UtcDateTime(utc2Ticks);
+
+                    Assert.Equal(expected, utc1 == utc2);
+                }
+            }
+        }
+
+        public class NotEqualsOpertor
+        {
+            public class Utc1AndUtc2Overload
+            {
+                [Theory]
+                [InlineData(1, 1, false)]
+                [InlineData(1, 2, true)]
+                public void WhenCalled_ReturnsResult(int utc1Ticks, int utc2Ticks, bool expected)
+                {
+                    var utc1 = new UtcDateTime(utc1Ticks);
+                    var utc2 = new UtcDateTime(utc2Ticks);
+
+                    Assert.Equal(expected, utc1 != utc2);
+                }
+            }
+        }
+
+        public class GreaterThanOpertor
+        {
+            public class Utc1AndUtc2Overload
+            {
+                [Theory]
+                [InlineData(1, 1, false)]
+                [InlineData(1, 2, false)]
+                [InlineData(2, 1, true)]
+                public void WhenCalled_ReturnsResult(int utc1Ticks, int utc2Ticks, bool expected)
+                {
+                    var utc1 = new UtcDateTime(utc1Ticks);
+                    var utc2 = new UtcDateTime(utc2Ticks);
+
+                    Assert.Equal(expected, utc1 > utc2);
+                }
+            }
+        }
+
+        public class LessThanOpertor
+        {
+            public class Utc1AndUtc2Overload
+            {
+                [Theory]
+                [InlineData(1, 1, false)]
+                [InlineData(1, 2, true)]
+                [InlineData(2, 1, false)]
+                public void WhenCalled_ReturnsResult(int utc1Ticks, int utc2Ticks, bool expected)
+                {
+                    var utc1 = new UtcDateTime(utc1Ticks);
+                    var utc2 = new UtcDateTime(utc2Ticks);
+
+                    Assert.Equal(expected, utc1 < utc2);
+                }
+            }
+        }
+
+        public class GreaterThanOrEqualsOpertor
+        {
+            public class Utc1AndUtc2Overload
+            {
+                [Theory]
+                [InlineData(1, 1, true)]
+                [InlineData(1, 2, false)]
+                [InlineData(2, 1, true)]
+                public void WhenCalled_ReturnsResult(int utc1Ticks, int utc2Ticks, bool expected)
+                {
+                    var utc1 = new UtcDateTime(utc1Ticks);
+                    var utc2 = new UtcDateTime(utc2Ticks);
+
+                    Assert.Equal(expected, utc1 >= utc2);
+                }
+            }
+        }
+
+        public class LessThanOrEqualsOpertor
+        {
+            public class Utc1AndUtc2Overload
+            {
+                [Theory]
+                [InlineData(1, 1, true)]
+                [InlineData(1, 2, true)]
+                [InlineData(2, 1, false)]
+                public void WhenCalled_ReturnsResult(int utc1Ticks, int utc2Ticks, bool expected)
+                {
+                    var utc1 = new UtcDateTime(utc1Ticks);
+                    var utc2 = new UtcDateTime(utc2Ticks);
+
+                    Assert.Equal(expected, utc1 <= utc2);
+                }
+            }
+        }
     }
 }

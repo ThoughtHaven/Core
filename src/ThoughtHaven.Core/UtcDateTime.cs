@@ -23,5 +23,23 @@ namespace ThoughtHaven
         }
 
         public DateTimeOffset ToOffset() => this.Offset;
+
+        public static bool operator ==(UtcDateTime utc1, UtcDateTime utc2) =>
+            utc1.Ticks == utc2.Ticks;
+
+        public static bool operator !=(UtcDateTime utc1, UtcDateTime utc2) =>
+            utc1.Ticks != utc2.Ticks;
+
+        public static bool operator >(UtcDateTime utc1, UtcDateTime utc2) =>
+            utc1.Ticks > utc2.Ticks;
+
+        public static bool operator <(UtcDateTime utc1, UtcDateTime utc2) =>
+            utc1.Ticks < utc2.Ticks;
+
+        public static bool operator >=(UtcDateTime utc1, UtcDateTime utc2) =>
+            utc1.Ticks >= utc2.Ticks;
+
+        public static bool operator <=(UtcDateTime utc1, UtcDateTime utc2) =>
+            utc1.Ticks <= utc2.Ticks;
     }
 }
