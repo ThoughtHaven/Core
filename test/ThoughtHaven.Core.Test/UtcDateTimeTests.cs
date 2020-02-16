@@ -164,6 +164,45 @@ namespace ThoughtHaven
             }
         }
 
+        public class EqualsMethod
+        {
+            public class ObjOverload
+            {
+                [Fact]
+                public void NullObj_ReturnsFalse()
+                {
+                    var utc = new UtcDateTime(1);
+
+                    Assert.False(utc.Equals(null!));
+                }
+
+                [Fact]
+                public void EmptyObj_ReturnsFalse()
+                {
+                    var utc = new UtcDateTime(1);
+
+                    Assert.False(utc.Equals(new object()));
+                }
+
+                [Fact]
+                public void SameRef_ReturnsTrue()
+                {
+                    var utc = new UtcDateTime(1);
+
+                    Assert.True(utc.Equals(utc));
+                }
+
+                [Fact]
+                public void EqualTicks_ReturnsTrue()
+                {
+                    var utc1 = new UtcDateTime(1);
+                    var utc2 = new UtcDateTime(1);
+
+                    Assert.True(utc1.Equals(utc2));
+                }
+            }
+        }
+
         public class EqualsOpertor
         {
             public class Utc1AndUtc2Overload

@@ -24,6 +24,16 @@ namespace ThoughtHaven
 
         public DateTimeOffset ToOffset() => this.Offset;
 
+        public override bool Equals(object obj)
+        {
+            if (obj is UtcDateTime dt)
+            {
+                return this == dt;
+            }
+
+            return base.Equals(obj);
+        }
+
         public static bool operator ==(UtcDateTime utc1, UtcDateTime utc2) =>
             utc1.Ticks == utc2.Ticks;
 
