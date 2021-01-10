@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace ThoughtHaven
+﻿namespace ThoughtHaven
 {
     public class SystemClock
     {
-        public virtual UtcDateTime UtcNow => new UtcDateTime(DateTimeOffset.UtcNow);
+        public virtual UtcDateTime UtcNow => new UtcDateTime(System.DateTimeOffset.UtcNow);
     }
 }

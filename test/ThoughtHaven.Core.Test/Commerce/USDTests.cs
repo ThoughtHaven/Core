@@ -118,7 +118,7 @@ namespace ThoughtHaven.Commerce
                 {
                     var usd = new Usd(1);
 
-                    Assert.Equal(usd.Cents.GetHashCode(), usd.GetHashCode());
+                    Assert.Equal(HashCode.Combine(usd.Cents), usd.GetHashCode());
                 }
             }
         }

@@ -1,14 +1,14 @@
 ﻿namespace ThoughtHaven
 {
-    public class UserMessage
+    public class UiMessage
     {
         public string Message { get; }
 
-        public UserMessage(string message)
+        public UiMessage(string message)
         {
             this.Message = Guard.NullOrWhiteSpace(nameof(message), message);
         }
 
-        public static implicit operator UserMessage(string message) => new UserMessage(message);
+        public static implicit operator UiMessage(string message) => new UiMessage(message);
     }
 }

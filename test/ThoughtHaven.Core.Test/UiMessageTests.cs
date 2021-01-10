@@ -3,7 +3,7 @@ using Xunit;
 
 namespace ThoughtHaven
 {
-    public class UserMessageTests
+    public class UiMessageTests
     {
         public class Constructor
         {
@@ -14,7 +14,7 @@ namespace ThoughtHaven
                 {
                     Assert.Throws<ArgumentNullException>("message", () =>
                     {
-                        new UserMessage(message: null!);
+                        new UiMessage(message: null!);
                     });
                 }
 
@@ -23,7 +23,7 @@ namespace ThoughtHaven
                 {
                     Assert.Throws<ArgumentException>("message", () =>
                     {
-                        new UserMessage(message: "");
+                        new UiMessage(message: "");
                     });
                 }
 
@@ -32,7 +32,7 @@ namespace ThoughtHaven
                 {
                     Assert.Throws<ArgumentException>("message", () =>
                     {
-                        new UserMessage(message: " ");
+                        new UiMessage(message: " ");
                     });
                 }
 
@@ -41,7 +41,7 @@ namespace ThoughtHaven
                 {
                     var message = "Expected message.";
 
-                    var userMessage = new UserMessage(message);
+                    var userMessage = new UiMessage(message);
 
                     Assert.Equal(message, userMessage.Message);
                 }
@@ -59,7 +59,7 @@ namespace ThoughtHaven
 
                     Assert.Throws<ArgumentNullException>("message", () =>
                     {
-                        UserMessage result = message!;
+                        UiMessage result = message!;
                     });
                 }
 
@@ -70,7 +70,7 @@ namespace ThoughtHaven
 
                     Assert.Throws<ArgumentException>("message", () =>
                     {
-                        UserMessage result = message;
+                        UiMessage result = message;
                     });
                 }
 
@@ -81,7 +81,7 @@ namespace ThoughtHaven
 
                     Assert.Throws<ArgumentException>("message", () =>
                     {
-                        UserMessage result = message;
+                        UiMessage result = message;
                     });
                 }
 
@@ -90,7 +90,7 @@ namespace ThoughtHaven
                 {
                     var message = "Expected message.";
 
-                    UserMessage userMessage = message;
+                    UiMessage userMessage = message;
 
                     Assert.Equal(message, userMessage.Message);
                 }

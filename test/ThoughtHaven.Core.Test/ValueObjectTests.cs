@@ -52,8 +52,7 @@ namespace ThoughtHaven
 
                     var result = valueObject.GetHashCode();
 
-                    Assert.Equal(value.GetHashCode(), result);
-                    Assert.Equal(valueObject.Value.GetHashCode(), result);
+                    Assert.Equal(HashCode.Combine(valueObject.Value), result);
                 }
             }
         }

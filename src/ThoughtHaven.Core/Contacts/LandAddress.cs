@@ -20,7 +20,7 @@ namespace ThoughtHaven.Contacts
 
             var lastSpaceInParts2 = parts[2].LastIndexOf(" ");
             var state = parts[2].Substring(0, lastSpaceInParts2).Trim();
-            var postalCode = parts[2].Substring(lastSpaceInParts2).Trim();
+            var postalCode = parts[2][lastSpaceInParts2..].Trim();
 
             var country = parts[3].Trim();
 

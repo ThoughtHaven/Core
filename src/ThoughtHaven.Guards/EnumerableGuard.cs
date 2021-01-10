@@ -37,7 +37,7 @@ namespace ThoughtHaven
 
         private static bool HasItems<T>(IEnumerable<T> items)
         {
-            foreach (var item in items ?? new T[0]) { return true; }
+            foreach (var _ in items ?? Array.Empty<T>()) { return true; }
 
             return false;
         }

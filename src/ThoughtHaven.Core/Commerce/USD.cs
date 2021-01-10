@@ -18,19 +18,19 @@
 
             if (value.Length == 2) { return $"$0.{value}"; }
 
-            var dollars = value.Substring(0, value.Length - 2);
-            var cents = value.Substring(value.Length - 2);
+            var dollars = value[0..^2];
+            var cents = value[^2..];
 
             return $"${dollars}.{cents}";
         }
 
-        public override int GetHashCode() => this.Cents.GetHashCode();
+        public override int GetHashCode() => System.HashCode.Combine(this.Cents);
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            Usd? usd = obj as Usd;
+            var usd = obj as Usd;
 
-            return !(usd is null) ? this == usd : base.Equals(obj);
+            return usd is not null ? this == usd : base.Equals(obj);
         }
 
         public static bool operator ==(Usd x, Usd y)

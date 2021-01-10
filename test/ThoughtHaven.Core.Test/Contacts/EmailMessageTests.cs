@@ -158,7 +158,7 @@ namespace ThoughtHaven.Contacts
                             from: new EmailContact("from@email.com"),
                             to: new EmailContact[] { null! },
                             subject: "subject",
-                            contents: new EmailContent[0]);
+                            contents: Array.Empty<EmailContent>());
                     });
                 }
 
@@ -234,7 +234,7 @@ namespace ThoughtHaven.Contacts
                     {
                         new EmailMessage(from: new EmailContact("from@email.com"),
                             to: new EmailContact[] { new EmailContact("to@email.com") },
-                            subject: "subject", contents: new EmailContent[0]);
+                            subject: "subject", contents: Array.Empty<EmailContent>());
                     });
                 }
 

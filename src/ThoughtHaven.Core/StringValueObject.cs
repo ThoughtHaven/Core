@@ -17,7 +17,7 @@ namespace ThoughtHaven
 
             for (var i = 0; i < value.Length; i++)
             {
-                if (validCharacters.IndexOf(value[i]) == -1)
+                if (!validCharacters.Contains(value[i]))
                 {
                     throw new ArgumentException(paramName: nameof(value),
                         message: $"Argument can only contain the following characters: '{validCharacters}'.");
